@@ -1,0 +1,38 @@
+{
+  "models": {
+    "vision_language": {
+      "name": "Salesforce/blip-image-captioning-base",
+      "type": "blip",
+      "local_path": "models/vision_language/blip",
+      "capabilities": [
+        "image_captioning",
+        "visual_qa",
+        "screen_understanding"
+      ]
+    },
+    "computer_use": {
+      "name": "Qwen/Qwen-VL-Chat",
+      "type": "qwen_vl",
+      "local_path": "models/vision_language/qwen_vl",
+      "capabilities": [
+        "gui_understanding",
+        "action_planning",
+        "screen_analysis"
+      ]
+    }
+  },
+  "settings": {
+    "device": "cpu",
+    "max_length": 512,
+    "temperature": 0.7,
+    "cache_dir": "models/cache",
+    "screenshot_interval": 1.0,
+    "gui_detection_threshold": 0.7
+  },
+  "computer_use": {
+    "screen_resolution": "auto",
+    "mouse_precision": "high",
+    "keyboard_delay": 0.1,
+    "action_delay": 0.5
+  }
+}
